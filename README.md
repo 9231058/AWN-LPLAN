@@ -1,3 +1,0 @@
-# AWN-LPLAN
-
-## Introduction

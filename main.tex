@@ -1,0 +1,303 @@
+\documentclass[serif,Blue]{beamer}
+\mode<presentation>
+\usetheme{Warsaw}
+%\usetheme{Madrid}
+%\usetheme{Darmstadt}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}\hypersetup{pdfpagemode=FullScreen}
+%\usetheme{AnnArbor}
+%\usecolortheme{beaver}
+%\usepackage{epstopdf}
+%\DeclareGraphicsExtensions{.eps}
+\usepackage{tikz}
+\usepackage{ragged2e}
+\usetikzlibrary{shadows}
+
+%define your own colors:
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Blue}{rgb}{0,0,1}
+\definecolor{Green}{rgb}{0,1,0}
+\definecolor{magenta}{rgb}{1,0,.6}
+\definecolor{lightblue}{rgb}{0,.5,1}
+\definecolor{lightpurple}{rgb}{.6,.4,1}
+\definecolor{gold}{rgb}{.6,.5,0}
+\definecolor{orange}{rgb}{1,0.4,0}
+\definecolor{hotpink}{rgb}{1,0,0.5}
+\definecolor{newcolor2}{rgb}{.5,.3,.5}
+\definecolor{newcolor}{rgb}{0,.3,1}
+\definecolor{newcolor3}{rgb}{1,0,.35}
+\definecolor{darkgreen1}{rgb}{0, .35, 0}
+\definecolor{darkgreen}{rgb}{0, .6, 0}
+\definecolor{darkred}{rgb}{.75,0,0}
+
+\xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
+\xdefinecolor{purpleish}{cmyk}{0.75,0.75,0,0}
+
+% outer themes include default, infolines, miniframes, shadow, sidebar, smoothbars, smoothtree, split, tree
+
+%\useoutertheme[subsection=true]{smoothbars}
+
+% to have the same footer on all slides
+%\setbeamertemplate{footline}[text line]{STUFF HERE!}
+\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+\usepackage{lipsum}
+
+% include packages
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{floatfig}
+%\usepackage[all,knot]{xy}
+%\xyoption{arc}
+\usepackage{url}
+\usepackage{pgf}
+\usepackage{pgf,pgfarrows,pgfnodes}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{algorithm2e}
+\usepackage{algorithmic}
+%\usepackage{algorithm,algorithmic}
+\usepackage{float}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{biblatex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hanging}
+\usepackage{multicol}
+\setbeamertemplate{footnote}{\hangpara{2em}{1}\makebox[2em][l]{\insertfootnotemark}\footnotesize\insertfootnotetext\par}
+
+\addbibresource{biblatex-examples.bib}
+\usetikzlibrary{shapes.geometric, arrows}
+
+%\usepackage[cmtt]{wrisym}
+\apptocmd{\frame}{}{\justifying}{}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\To}{\longrightarrow}
+
+%%% ----------------------------------------------------------------------
+
+\setbeamertemplate{footnote}{\hangpara{2em}{1}\makebox[2em][l]{\insertfootnotemark}\footnotesize\insertfootnotetext\par}
+%footnote
+\usepackage{perpage}
+\MakePerPage{footnote}
+\setbeamerfont{footnote}{size=\tiny}
+%%% footnote without mark
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\renewcommand{\footnotesize}{}
+%footnote in symboles
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\labelBlock}[1]{%
+	\refstepcounter{BlockCounter}%
+	\hypertarget{#1}{} (\theBlockCounter\label{#1})%
+}
+
+\newcommand{\refBlock}[1]{%
+	\hyperref[#1]{Block~\ref*{#1}}% (see p. 18 of the hyperref manual)
+}
+
+\newcommand\mathcircled[1]{%
+	\mathpalette\@mathcircled{#1}%
+}
+%\newcommand\@mathcircled[2]{%
+%	\tikz[baseline=(math.base)] \node[draw,circle,inner sep=1pt] (math) {$\m@th#1#2$};%
+%}
+
+%\tikzstyle{blockp1} = [rectangle, draw, fill=white,
+%    text width=11em, text centered, node distance=5cm, inner sep=0pt ,rounded corners, minimum height=5em]
+%\tikzstyle{blockpp1} = [rectangle, draw, fill=white,
+%    text width=20em, text centered, node distance=5cm, inner sep=0pt ,rounded corners, minimum height=12em]
+%\tikzstyle{blockp2} = [rectangle, draw, fill=white,
+%    text width=15em, text centered, rounded corners, minimum height=8em]
+%\tikzstyle{blockp3} =  [rectangle, draw, fill=white,
+%    text width=9em, text centered, node distance=5cm, inner sep=0pt ,rounded corners, minimum height=5em]
+%\tikzstyle{linep} = [draw, -latex']
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+
+\newcommand{\highlight}[1]{%
+\colorbox{blue!30}{$\displaystyle#1$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatother
+
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamerfont{footnote}{size=\tiny}
+\tikzstyle{block1} = [rectangle, draw, fill=blue!45,
+text width=25em, text centered, node distance=5cm, inner sep=0pt, rounded corners, minimum height=2em]
+% \tikzstyle{block_null} = [rectangle, draw=none, fill=white,
+% text width=2em, text centered, node distance=2cm, inner sep=0pt ,rounded corners, minimum height=0.5em]
+\tikzstyle{block_p1} = [rectangle, draw, fill=blue!30,
+text width=8em, text centered, node distance=1.75cm, inner sep=0pt, rounded corners, minimum height=3em]
+%\tikzstyle{block_null} = [rectangle, draw=none, fill=white,
+%    text width=2em, text centered, node distance=2cm, inner sep=0pt ,rounded corners, minimum height=2em]
+\tikzstyle{block2} = [rectangle, draw, fill=blue!20,
+text width=3em, text centered, node distance=1cm, inner sep=0pt, rounded corners, minimum height=2em]
+\tikzstyle{block_p3} =  [rectangle, draw, fill=white,
+text width=1em, text centered, node distance=2cm, inner sep=0pt, rounded corners, minimum height=5em]
+\tikzstyle{block3} =  [rectangle, draw, fill=blue!10,
+text width=2.5em, text centered, node distance=1.25cm, inner sep=0pt, rounded corners, minimum height=2em]
+
+\tikzstyle{block4} =  [rectangle, draw, fill=blue!5,
+text width=3em, text centered, node distance=1.25cm, inner sep=0pt, rounded corners, minimum height=1.5em]
+
+\tikzstyle{line} = [draw, -latex']
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzstyle{B1} = [rectangle, draw, fill=blue!45,
+text width=5em, text centered, node distance=0.5cm, inner sep=0pt, rounded corners, minimum height=1em]
+
+\tikzstyle{B2} = [rectangle, draw, fill=blue!35,
+text width=10em, text centered, node distance=1.0cm, inner sep=0pt, minimum height=1.5em]
+
+\tikzstyle{B3} = [rectangle, draw, fill=blue!35,
+text width=10em, text centered, node distance=1.25cm, inner sep=0pt, minimum height=2.5em]
+
+\tikzstyle{B4} = [diamond, draw, fill=blue!25,
+text width=2.5em, text centered, node distance=1.0cm, inner sep=0pt, minimum height=1em]
+
+\tikzstyle{B5} = [rectangle, draw, fill=blue!15,
+text width=8em, text centered, node distance=5cm, inner sep=0pt, minimum height=1em]
+
+\tikzstyle{B6} = [rectangle, draw, fill=blue!35,
+text width=10em, text centered, node distance=1.0cm, inner sep=0pt, minimum height=3em]
+
+\tikzstyle{B7} = [rectangle, draw, fill=blue!35,
+text width=8em, text centered, node distance=0.5cm, inner sep=0pt, minimum height=1em]
+
+
+\tikzstyle{line} = [draw, -latex']
+
+\tikzstyle{block1} = [rectangle, draw, fill=blue!45,
+text width=25em, text centered, node distance=5cm, inner sep=0pt, rounded corners, minimum height=2em]
+% \tikzstyle{block_null} = [rectangle, draw=none, fill=white,
+% text width=2em, text centered, node distance=2cm, inner sep=0pt ,rounded corners, minimum height=0.5em]
+\tikzstyle{block_p1} = [rectangle, draw, fill=blue!30,
+text width=8em, text centered, node distance=1.75cm, inner sep=0pt,rounded corners, minimum height=3em]
+%\tikzstyle{block_null} = [rectangle, draw=none, fill=white,
+%    text width=2em, text centered, node distance=2cm, inner sep=0pt ,rounded corners, minimum height=2em]
+\tikzstyle{block2} = [rectangle, draw, fill=blue!20,
+text width=3em, text centered, node distance=1cm, inner sep=0pt, rounded corners, minimum height=2em]
+\tikzstyle{block_p3} =  [rectangle, draw, fill=white,
+text width=1em, text centered, node distance=2cm, inner sep=0pt,rounded corners, minimum height=5em]
+\tikzstyle{block3} =  [rectangle, draw, fill=blue!10,
+text width=2.5em, text centered, node distance=1.25cm, inner sep=0pt, rounded corners, minimum height=2em]
+
+\tikzstyle{block4} =  [rectangle, draw, fill=blue!5,
+text width=3em, text centered, node distance=1.25cm, inner sep=0pt, rounded corners, minimum height=1.5em]
+
+\tikzstyle{line} = [draw, -latex']
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzstyle{B1} = [rectangle, draw, fill=blue!45,
+text width=5em, text centered, node distance=1.0cm, inner sep=0pt, rounded corners, minimum height=1em]
+
+\tikzstyle{B2} = [rectangle, draw, fill=blue!35,
+text width=10em, text centered, node distance=1.25cm, inner sep=0pt, minimum height=2em]
+
+\tikzstyle{B3} = [rectangle, draw, fill=blue!35,
+text width=10em, text centered, node distance=1.25cm, inner sep=0pt, minimum height=3em]
+
+\tikzstyle{B4} = [diamond, draw, fill=blue!25,
+text width=2.5em, text centered, node distance=1.5cm, inner sep=0pt, minimum height=1em]
+
+\tikzstyle{B5} = [rectangle, draw, fill=blue!15,
+text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=1em]
+
+\tikzstyle{line} = [draw, -latex']
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\let\olditem\item
+%\renewcommand\item{\olditem\justifying}
+\addtobeamertemplate{block begin}{}{\justifying}
+% show title in each slide
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+%\let\subsubsection\subsection
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\setbeamertemplate{footline}[page number]
+%\setbeamertemplate{headline}[page number]
+\title[Short Paper Title]{ Advanced Topics in Wireless Networks}
+\subtitle{Resource Allocation in CDMA and OFDMA Cellular Networks}
+\author[Author]{Parham Alvani}
+\institute{Department of Computer Engineering and Information Technology \\ AmirKabir University of Technology}
+\date{\today}
+%\beamerdefaultoverlayspecification{<+->}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin Your Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\setbeamercolor*{item}{fg=darkred}
+\setbeamertemplate{footline}[centered frame number]
+
+\frame{\titlepage}
+
+\frame{\frametitle{Table of contents}\tableofcontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\justifying{}
+\section{Introduction to IoT Communication}
+\subsection{A General System Model and Preliminary Concepts}
+\subsection{Radio Resource and Interference Management}
+\section{A Closer look to Zigbee}
+
+\subsection{Basic structure of frames in OFDMA Systems }
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{  Dynamic ICIC- A General System Model and Preliminary Concepts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\frametitle{System Model and Notations}
+
+	\begin{block}<+->{Uplink Transmission}\justifying{}
+		Consider A Multi-cell OFDMA-based Cellular Network consisting of
+		\begin{itemize}\justifying{}
+			\item In OFDMA, the available bandwidth $W$ is subdivided into $\mid \mathcal{C} \mid$  multiple sub-channels
+			\item Thus Bandwidth of each sub-channel $k$ is given by $W^k=\dfrac{W}{\mid \mathcal{C} \mid}$
+			\item  A set of $C$ sub-channel	(SC) is denoted by $\mathcal{C}=\{1,2,\ldots,C\}$ (also so called resource block, sub-carrier, channel, or carrier)
+		\end{itemize}
+	\end{block}
+}
+
+
+\end{document}
