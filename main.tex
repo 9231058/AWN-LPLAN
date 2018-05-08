@@ -247,28 +247,20 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 \setbeamertemplate{footline}[page number]
 %\setbeamertemplate{headline}[page number]
 \title[Short Paper Title]{ Advanced Topics in Wireless Networks}
-\subtitle{Resource Allocation in CDMA and OFDMA Cellular Networks}
+\subtitle{Low Power Local Area Networks}
 \author[Author]{Parham Alvani}
 \institute{Department of Computer Engineering and Information Technology \\ AmirKabir University of Technology}
 \date{\today}
-%\beamerdefaultoverlayspecification{<+->}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin Your Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%\setbeamercolor*{item}{fg=darkred}
 \setbeamertemplate{footline}[centered frame number]
 
 \frame{\titlepage}
 
 \frame{\frametitle{Table of contents}\tableofcontents}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%
-%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \justifying{}
@@ -277,27 +269,38 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 \subsection{Radio Resource and Interference Management}
 \section{A Closer look to Zigbee}
 
-\subsection{Basic structure of frames in OFDMA Systems }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Introduction to IoT Communication}
+	\begin{itemize}
+		\item Capillary M2M
+		\begin{itemize}
+			\item low power
+			\item low cost
+			\item short range
+		\end{itemize}
+		\item Cellular M2M
+		\begin{itemize}
+			\item long distance
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{  Dynamic ICIC- A General System Model and Preliminary Concepts}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{\frametitle{System Model and Notations}
-
-	\begin{block}<+->{Uplink Transmission}\justifying{}
-		Consider A Multi-cell OFDMA-based Cellular Network consisting of
-		\begin{itemize}\justifying{}
-			\item In OFDMA, the available bandwidth $W$ is subdivided into $\mid \mathcal{C} \mid$  multiple sub-channels
-			\item Thus Bandwidth of each sub-channel $k$ is given by $W^k=\dfrac{W}{\mid \mathcal{C} \mid}$
-			\item  A set of $C$ sub-channel	(SC) is denoted by $\mathcal{C}=\{1,2,\ldots,C\}$ (also so called resource block, sub-carrier, channel, or carrier)
+\begin{frame}{Introduction to IoT Communication}
+	\begin{itemize}
+		\item Multitude and variaty
+		\begin{itemize}
+			\item diverse Quality of Service (QoS)
+			\item huge amount of traffic
+			\item huge address space
 		\end{itemize}
-	\end{block}
-}
+
+		\item Self-organization
+		\item Reliability and robustness
+		\item Security and privacy
+	\end{itemize}
+\end{frame}
 
 
 \end{document}
