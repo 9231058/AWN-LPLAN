@@ -62,8 +62,6 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{floatfig}
-%\usepackage[all,knot]{xy}
-%\xyoption{arc}
 \usepackage{url}
 \usepackage{pgf}
 \usepackage{pgf,pgfarrows,pgfnodes}
@@ -72,11 +70,10 @@
 \usepackage{xcolor}
 \usepackage{algorithm2e}
 \usepackage{algorithmic}
-%\usepackage{algorithm,algorithmic}
 \usepackage{float}
-%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{tikz}
-\usepackage{biblatex}
+\usepackage[sorting=none,style=ieee]{biblatex}
+\usepackage{filecontents}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{hanging}
 \usepackage{multicol}
@@ -252,6 +249,8 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 \institute{Department of Computer Engineering and Information Technology \\ AmirKabir University of Technology}
 \date{\today}
 
+\addbibresource{refs.bib}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin Your Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -379,13 +378,135 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{IEEE 802.15.4}
+\begin{frame}{Zigbee}
 	\begin{itemize}\justifying{}
 		\item
 			IEEE 802.15 serial standards are established by IEEE 802.15 Working Group
 			for Personal Area Network or short distance wireless networks.
+		\item
+			Zigbee is built on the IEEE 802.15.4. The two lower layers: the physical
+			(PHY) layer and the medium access control (MAC) sub-layer of Zigbee stack
+			architecture is pecified in IEEE 802.15.4.
 	\end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	\begin{block}{IEEE 802.15.4 Features}
+		\begin{itemize}\justifying{}
+			\item Data rates of 250 kbps, 40 kbps, and 20 kbps. Symbol rate is 62.5 ksymbol/sspm
+			\item Two addressing mode: 16-bits short and 64-bit IEEE addressing
+			\item Optional use Star-topology or Peer to Peer topology, and also supposes Cluster Tree nowdays.
+			\item CSMA-CA channel access
+			\item Automatic network establishment by the coordinator
+			\item Full handshake protocol for transfer reliability
+			\item Power management to ensure low power consumption
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	\begin{block}{IEEE 802.15.4 Features}
+		\begin{itemize}\justifying{}
+			\item 16 channels in the 2.4GHz ISM band, 10 channels in the 915MHz and one channel in the 868MHz
+			\item Optinal to use Acknowledgement packet
+			\item Transmit Power: About 1 mW transmit power
+			\item RSSI (Received signal strength indication) measurement
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	\begin{block}{Type of Device}
+		\begin{itemize}\justifying{}
+			\item RFD (Reduced Function Device)
+			\begin{itemize}\justifying{}
+				\item Coordinator
+				\item Router
+				\item End Device
+			\end{itemize}
+			\item FFD (Full Function Device)
+			\begin{itemize}\justifying{}
+				\item End Device
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	\center\includegraphics[scale=.7]{img/ztopo.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	IEEE 802.15.4 MAC-PHY
+	\center\includegraphics[scale=.4]{img/154frame.jpg}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	Superframe Structure
+	\begin{itemize}
+		\item CAP:\@ Contention Access Period
+		\item CFP:\@ Contention Free Period
+		\item GTS:\@ Guaranteed Time Slots
+	\end{itemize}
+	\center\includegraphics[scale=.3]{img/sframe.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	Zigbee Stack
+	\center\includegraphics[scale=1]{img/zstack.png}
+\end{frame}
+
+
+\frame{\frametitle{Table of contents}\tableofcontents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{A Closer look to Zigbee}
+	Zigbee Problems
+	\begin{itemize}\justifying{}
+		\item Energy Efficiency
+		\item Routing
+		\item Localization
+		\item Data management
+		\item Reliability
+		\item Security
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{A Closer look to Zigbee}
+	\begin{block}{An Energy Efficient Schedule for IEEE 802.15.4/Zigbee Cluster Tree WSN with Multiple Collision Domains and Period Crossing Constraint}
+		\begin{itemize}\justifying{}
+			\item A collision-free cluster schedule that meets all the data flows deadlines
+			\item Minimization of the energy consumption of the nodes
+		\end{itemize}
+	\end{block}
+	\footfullcite{Ahmad2018}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	\center\includegraphics[scale=.2]{img/cluster-flow.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	Average network energy consumption within 40 min
+	\center\includegraphics[scale=.5]{img/fig17.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Zigbee}
+	Network retransmitions
+	\center\includegraphics[scale=.5]{img/fig1819.png}
+\end{frame}
+
 
 
 
