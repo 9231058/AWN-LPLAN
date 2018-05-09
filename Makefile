@@ -12,3 +12,4 @@ all: awn-lplan
 
 awn-lplan: main.tex
 	pdflatex main.tex
+	pdflatex main.tex
