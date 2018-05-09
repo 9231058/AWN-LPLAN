@@ -265,42 +265,128 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \justifying{}
 \section{Introduction to IoT Communication}
-\subsection{A General System Model and Preliminary Concepts}
-\subsection{Radio Resource and Interference Management}
+\subsection{BLE}
+\subsection{Zigbee}
 \section{A Closer look to Zigbee}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Introduction to IoT Communication}
 	\begin{itemize}
-		\item Capillary M2M
-		\begin{itemize}
-			\item low power
-			\item low cost
-			\item short range
-		\end{itemize}
-		\item Cellular M2M
-		\begin{itemize}
-			\item long distance
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Introduction to IoT Communication}
-	\begin{itemize}
 		\item Multitude and variaty
-		\begin{itemize}
-			\item diverse Quality of Service (QoS)
-			\item huge amount of traffic
-			\item huge address space
-		\end{itemize}
+			\begin{itemize}
+				\item diverse Quality of Service (QoS)
+				\item huge amount of traffic
+				\item huge address space
+			\end{itemize}
 
 		\item Self-organization
 		\item Reliability and robustness
 		\item Security and privacy
 	\end{itemize}
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Introduction to IoT Communication}
+	\begin{itemize}
+		\item Capillary M2M
+			\begin{itemize}
+				\item low power
+				\item low cost
+				\item short range
+			\end{itemize}
+		\item Cellular M2M
+			\begin{itemize}
+				\item long distance
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Introduction to IoT Communication}
+	\begin{itemize}
+		\item LPWAN
+			\begin{itemize}
+				\item NB-IoT
+				\item LoRaWAN
+				\item Sigfox
+			\end{itemize}
+		\item LPLAN
+			\begin{itemize}
+				\item BLE
+				\item Zigbee
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{IEEE 802.15.1/Bluetooth}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[scale=0.4]{img/ble.png}
+			\end{center}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Robustness
+				\item Low Power
+				\item Low Cost
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{IEEE 802.15.1/Bluetooth}
+	\begin{block}{Piconets}
+		\begin{itemize}\justifying{}
+			\item
+				Bluetooth enabled electronic devices connect and communicate
+				wirelessly through short-range, ad hoc networks known as \emph{piconets}.
+			\item
+				Each device can simultaneously communicate with \textbf{up to seven other devices} within a
+				single piconet.
+		\end{itemize}
+	\end{block}
+	\begin{block}{Features}
+		\begin{itemize}\justifying{}
+			\item
+				Bluetooth wireless technology is geared towards voice and data applications
+				and able to penetrate solid objects.
+			\item
+				It is omni-directional and does not require line-of-sight positioning of connected devices.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{IEEE 802.15.1/Bluetooth}
+	\begin{block}{PHY Layer}
+		\begin{itemize}\justifying{}
+			\item 2.4 GHz frequency band
+			\item 79 Channels, each channel has 1 MHz bandwidth
+			\item 3 Power class for 1, 10 and 100 meter transmission distance
+			\item Physical Links
+			\begin{itemize}
+				\item Data Link: Asynchronous Connectionless (ACL)
+				\item Voice Link: Synchronous Connection Oriented (SCO)
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+	\center\includegraphics[scale=.7]{img/btopo.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{IEEE 802.15.4}
+	\begin{itemize}\justifying{}
+		\item
+			IEEE 802.15 serial standards are established by IEEE 802.15 Working Group
+			for Personal Area Network or short distance wireless networks.
+	\end{itemize}
+\end{frame}
+
 
 
 \end{document}
