@@ -265,6 +265,7 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \justifying{}
 \section{Introduction to IoT Communication}
+\subsection{WiFi}
 \subsection{BLE}
 \subsection{Zigbee}
 \section{A Closer look to Zigbee}
@@ -326,13 +327,20 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 		\begin{itemize}
 			\item It uses \textbf{900 MHz} license exempt bands to provide \emph{extended range} Wi-Fi networks, compared to conventional Wi-Fi networks operating in the 2.4 GHz and 5 GHz bands.
 			\item It also benefits from lower energy consumption.
+			\item It aims at providing connectivity to thousands of devices under an access point.
+			\item Relay Access Point
+			\item Power Saving:
+			\begin{itemize}
+				\item TIM
+				\item non-TIM
+			\end{itemize}
 		\end{itemize}
 	\end{block}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{IEEE 802.11/WiFi}
-	\begin{tabular}{p{1cm} p{1cm} p{1.5cm} p{1.5cm} p{2cm}}
+	\begin{tabular}{p{1cm} p{1cm} p{1.5cm} p{1.5cm} p{3.5cm}}
 		\toprule
 		802.11 protocol & Release date & Frequency (GHz) & Bandwidth (MHz) & Stream data rate (Mbit/s) \\
 		\midrule
@@ -474,10 +482,17 @@ text width=8em, text centered, node distance=4cm, inner sep=0pt, minimum height=
 			\end{itemize}
 		\end{itemize}
 	\end{block}
+	\begin{block}{IEEE 802.15.4 Topologies}
+		\begin{itemize}\justifying{}
+			\item Star
+			\item Peer to Peer
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Zigbee}
+	Zigbee Topologies
 	\center\includegraphics[scale=.7]{img/ztopo.png}
 \end{frame}
 
